@@ -7,6 +7,7 @@ burgerIcon.addEventListener('click', () => {
   navBarMenu.classList.toggle('is-active')
 });
 
+// declared variables
 const searchForm = document.querySelector('form');
 const resultContent = document.querySelector('#content');
 const container = document.querySelector('#container');
@@ -14,7 +15,180 @@ let searchValue = '';
 let APP_ID = '9f9d72f1';
 let API_KEY = '3813ab18f8120cb995cd2175c4202cb8';
 
+// dinner recipes for different cuisines - Asian
 
+let recipeAsian = document.querySelector('#recipeAsian')
+recipeAsian.addEventListener('click', (e) => {
+e.preventDefault();
+ asiaAPI()
+})
+
+async function asiaAPI(){
+  const asiaUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=dinner&app_id=9f9d72f1&app_key=3813ab18f8120cb995cd2175c4202cb8&cuisineType=Asian&mealType=Dinner&dishType=Main%20course
+  `;
+  let asiaResponse = await fetch(asiaUrl);
+  console.log(asiaResponse)
+  const asiaData = await asiaResponse.json();
+  generateHTML(asiaData.hits);
+  console.log(asiaData);
+}
+
+
+function generateHTML(asiaCuisineType) {
+  let generateHTML = '';
+  asiaCuisineType.map(() => {
+    generateHTML +=
+    `<div class="card">
+      <div class="card-image">
+        <figure class="food-image is-4by2">
+          <img src="${results.recipe.image}" alt="food image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <h5 class="card-title">${results.recipe.label}</h5>
+        <p class="card-text">Cuisine: ${results.recipe.cuisineType}
+        </p>  
+        <a href="${results.recipe.url} id="recipeBtn" class="button is-success is-light is-outlined is-rounded is-centered mt-3">
+          Go to Recipe
+        </a>
+      </div>
+    </div>  `
+  })
+  
+  resultContent.innerHTML = generateHTML;
+}
+
+
+// dinner recipes for different cuisines - caribbean
+let recipeCarib = document.querySelector('#recipeCarib')
+recipeCarib.addEventListener('click', (e) => {
+e.preventDefault();
+ caribAPI()
+})
+
+async function caribAPI(){
+  const caribUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=dinner&app_id=9f9d72f1&app_key=3813ab18f8120cb995cd2175c4202cb8&cuisineType=Caribbean&mealType=Dinner&dishType=Main%20course
+  `;
+  let caribResponse = await fetch(caribUrl);
+  console.log(caribResponse)
+  const caribData = await caribResponse.json();
+  generateHTML(caribData.hits);
+  console.log(caribData);
+}
+
+function generateHTML(caribCuisineType) {
+  let generateHTML = '';
+  caribCuisineType.map(() => {
+    generateHTML +=
+    `<div class="card">
+      <div class="card-image">
+        <figure class="food-image is-4by2">
+          <img src="${results.recipe.image}" alt="food image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <h5 class="card-title">${results.recipe.label}</h5>
+        <p class="card-text">Cuisine: ${results.recipe.cuisineType}
+        </p>  
+        <a href="${results.recipe.url} id="recipieBtn" class="button is-success is-light is-outlined is-rounded is-centered mt-3">
+          Go to recipie
+        </a>
+      </div>
+    </div>  `
+  })
+
+  resultContent.innerHTML = generateHTML;
+}
+
+
+// dinner recipes for different cuisines - Middle Eastern
+
+let recipemiddleE = document.querySelector('#recipeMiddleE')
+recipeMiddleE.addEventListener('click', (e) => {
+e.preventDefault();
+ middleEAPI()
+})
+
+async function middleEAPI(){
+  const middleEUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=dinner&app_id=9f9d72f1&app_key=3813ab18f8120cb995cd2175c4202cb8&cuisineType=Middle%20Eastern&mealType=Dinner&dishType=Main%20course`;
+
+  let middleEResponse = await fetch(middleEUrl);
+  console.log(middleEResponse)
+  const middleEData = await middleEResponse.json();
+  generateHTML(middleEData.hits);
+  console.log(middleEData);
+}
+
+
+function generateHTML(middleECuisineType) {
+  let generateHTML = '';
+  middleECuisineType.map(() => {
+    generateHTML +=
+    `<div class="card">
+      <div class="card-image">
+        <figure class="food-image is-4by2">
+          <img src="${results.recipe.image}" alt="food image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <h5 class="card-title">${results.recipe.label}</h5>
+        <p class="card-text">Cuisine: ${results.recipe.cuisineType}
+        </p>  
+        <a href="${results.recipe.url} id="recipieBtn" class="button is-success is-light is-outlined is-rounded is-centered mt-3">
+          Go to recipie
+        </a>
+      </div>
+    </div>  `
+  })
+  
+  resultContent.innerHTML = generateHTML;
+}
+
+// dinner recipes for different cuisines - Mexican
+
+let recipeMexican = document.querySelector('#recipeMexican')
+recipeMexican.addEventListener('click', (e) => {
+e.preventDefault();
+ mexEAPI()
+})
+
+async function mexEAPI(){
+  const mexUrl = `https://api.edamam.com/api/recipes/v2?type=public&q=dinner&app_id=9f9d72f1&app_key=3813ab18f8120cb995cd2175c4202cb8&cuisineType=Mexican&mealType=Dinner&dishType=Main%20course
+  `;
+  
+  let mexResponse = await fetch(mexUrl);
+  console.log(mexResponse)
+  const mexData = await mexResponse.json();
+  generateHTML(mexData.hits);
+  console.log(mexData);
+}
+
+
+function generateHTML(mexCuisineType) {
+  let generateHTML = '';
+  mexCuisineType.map(() => {
+    generateHTML +=
+    `<div class="card">
+      <div class="card-image">
+        <figure class="food-image is-4by2">
+          <img src="${results.recipe.image}" alt="food image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <h5 class="card-title">${results.recipe.label}</h5>
+        <p class="card-text">Cuisine: ${results.recipe.cuisineType}
+        </p>  
+        <a href="${results.recipe.url} id="recipieBtn" class="button is-success is-light is-outlined is-rounded is-centered mt-3">
+          Go to recipe
+        </a>
+      </div>
+    </div>  `
+  })
+  
+  resultContent.innerHTML = generateHTML;
+}
+
+// search input function 
 searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
   searchValue = e.target.querySelector('input').value;
@@ -33,104 +207,28 @@ function generateHTML(results) {
   let generateHTML = '';
   results.map(results => {
     generateHTML +=
-    `<section class="section">
-      <div class="container>
-        <div class="columns">
-          <div class="column">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-4by2">
-                  <img src="${results.recipe.image}" alt="Placeholder image">
-                </figure>
-              </div>
-    
-              <div class="card-content">
-
-                <h5 class="card-title">${results.recipe.label}</h5>
-          
-                <p class="card-text">Origin: ${results.recipe.cuisineType}
-                </p>
-              
-                <a href="${results.recipe.url} id="recipieBtn" class="button is-success is-light is-outlined is-rounded is-centered mt-3">
-                Go to recipie
-                </a>
-              </div>
-            </div>
-          </div>
+    `
+     <div class="card">
+       <div class="card-image">
+          <figure class="food-image is-4by2">
+            <img src="${results.recipe.image}" alt="food image">
+          </figure>
         </div>
-      </div>
-    </section>
+    
+        <div class="card-content">
+
+          <h5 class="card-title">${results.recipe.label}</h5>
+          
+          <p class="card-text">Cuisine: ${results.recipe.cuisineType}
+          </p>
+              
+          <a href="${results.recipe.url} id="recipeBtn" class="button is-success is-light is-outlined is-rounded is-centered mt-3">
+            Go to recipe
+          </a>
+        </div>
+    </div>  
    `
   })
 
   resultContent.innerHTML = generateHTML;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let searchButton = document.querySelector('#searchButton')
-// // Add an event listener to the button that runs the function sendApiRequest when it is clicked 
-// searchButton.addEventListener('click', ()=>{
-//     console.log('button pressed')
-//     sendApiRequest()
-// })
-
-// // fetch data function
-// async function sendApiRequest(){
-//   let APP_ID = '9f9d72f1'
-//   let API_KEY = '3813ab18f8120cb995cd2175c4202cb8'
-//   let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=pizza`);
-//   console.log(response)
-//   let data = await response.json()
-//   console.log(data)
-//   useApiData(data)
-// }
-
-// // function will do something with the data received from API 
-// // add a card  and grab the image data from inspect dev
-// // add path to card title
-// // add url to button
-// function useApiData(data){
-// document.querySelector('#content').innerHTML = `
-// <div class="card">
-//   <div class="card-image">
-//     <figure class="image is-4by3">
-//       <img src="${data.hits[0].recipe.image}" alt="Placeholder image">
-//     </figure>
-//   </div>
-//   <div class="card-content">
-//     <h5 class="card-title">${data.hits[0].recipe.label}</h5>
-//     <p class="card-text">Cusine: ${data.hits[0].recipe.cuisineType}
-//     </p>
-//     <a href="${data.hits[0].recipe.url} id="recipieBtn" class="button is-success is-light is-outlined is-rounded is-centered mt-3">
-//       Go to recipie
-//     </a>
-//   </div>
-// </div>
-// `
-// }
-
