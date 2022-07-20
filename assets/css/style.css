@@ -5,11 +5,14 @@
 .card {
   width: 200px;
   height: 400px;
-  margin-right: 10px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+
+  font-size: 14px;
 }
 
 .input {
-  width: 400px;
+  width: 300px;
 }
 
 footer {
@@ -18,4 +21,8 @@ footer {
 
 @media screen {
   
+}
+
+#recipeBtn {
+
 }

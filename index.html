@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Food & Culture Website</title>
+    <title>Food & Cocktails</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="assets/css/style.css"/>
     <script
@@ -16,7 +16,7 @@
     <nav class="navbar navbar has-shadow is-white">
       <!-- logo / brand -->
       <div class="navbar-brand">
-        <a class="navbar-item">
+        <a class="navbar-item logo"  href="index.html">
           <img src="assets/images/logo.png" alt="site logo" style="max-height: 60px" class="py-1 px1">
         </a>
         <!-- mobile menu -->
@@ -28,37 +28,59 @@
         </a>
       </div>
 
+      <!-- navbar links -->
       <div class="navbar-menu" id="nav-links">
         <div class="navbar-start">
-          <a class="navbar-item">Countries
-          </a>
-          <a class="navbar-item">Recipes</a>
-          <a class="navbar-item">Discover New Cultures</a>
+          
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Recipes By Cuisine
+            </a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item" id="recipeAsian">
+                Asian Cuisine
+              </a>
+              <a class="navbar-item" id="recipeCarib" 
+              >
+                Caribbean Cuisine
+              </a>
+              <a class="navbar-item" id="recipeMiddleE" >
+                Middle Eastern Cuisine
+              </a>
+              <a class="navbar-item" id="recipeMexican">
+                Mexican Cuisine
+              </a>
+            </div>
+
+          </div>
+          <a href="drinks.html" class="navbar-item" id="drinkRecipes" >Cocktails</a>
         </div>
+
+      </div>
+      <!-- recipie search bar and button -->
+      <div class="field has-addons">
+        <form id="formClass" class="control">
+          <input id="searchInput" class="input is-rounded is-hovered mt-3" type="text" placeholder="e.g. chicken">
+          <button type="submit" id="search" class="button is-success is-light is-outlined is-rounded is-centered mt-3">
+            Search
+          </button>
+        </form>
       </div>
     </nav>
     
-    <!-- recipie search bar and button -->
-    <div class="field has-addons">
-      <form id="formClass" class="control">
-        <input id="searchInput" class="input is-rounded is-hovered mt-3" type="text" placeholder="e.g. chicken">
-      </form>
-      
-    </div>
+    
     
     <!-- title -->
-    <h2 class="title is-2 has-text-centered mt-5 mb-6">Food & Culture
+    <h2 class="title is-2 has-text-centered mt-5 mb-6">Eat . Drink . Enjoy
     </h2>
 
     <section id="container">
-      <div id="content" class="columns is-centered">
+      <div id="content" class="columns is-centered is-multiline is-mobile">
         <img class="column is-half" src="https://post.healthline.com/wp-content/uploads/2020/09/healthy-eating-ingredients-732x549-thumbnail.jpg">
       </div>
     </section>
     
-    
-
-
 
 
     <!-- Start footnotes -->
