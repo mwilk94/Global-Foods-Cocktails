@@ -3,8 +3,8 @@
 }
 
 .card {
-  width: 200px;
-  height: 400px;
+  width: 220px;
+  height: 410px;
   margin-right: 30px;
   margin-bottom: 20px;
 
@@ -30,4 +30,12 @@ footer {
 
 #food-pic {
   margin-top: 20px;
+}
+
+body {
+  background-color: rgba(20, 17, 17, 0.94);
+}
+
+#body-image{
+
 }
