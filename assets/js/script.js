@@ -62,7 +62,7 @@ function generateHTMLcocktail(results) {
             Go to recipe
           </a>
         </div>
-     s</div>  
+     </div>  
    `
   })
 
