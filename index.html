@@ -32,9 +32,13 @@
       <div class="navbar-menu" id="nav-links">
         <div class="navbar-start">
           
+          <a class="navbar-item" href="index.html">
+            Home
+          </a>
+         
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">
-              Recipes By Cuisine
+              Discover By Cuisine
             </a>
     
             <div class="navbar-dropdown">
@@ -52,39 +56,68 @@
                 Mexican Cuisine
               </a>
             </div>
-
           </div>
           <a href="drinks.html" class="navbar-item" id="drinkRecipes" >Cocktails</a>
         </div>
-
-      </div>
-      <!-- recipie search bar and button -->
-      <div class="field has-addons">
-        <form id="formClass" class="control">
-          <input id="searchInput" class="input is-rounded is-hovered mt-3" type="text" placeholder="e.g. chicken">
-          <button type="submit" id="search" class="button is-success is-light is-outlined is-rounded is-centered mt-3">
-            Search
-          </button>
-        </form>
       </div>
     </nav>
+
+    <!-- content for body  -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+          <div class="columns is-vcentered">
+              <div class="column is-5">
+                  <figure class="image is-4by3">
+                      <img src="https://source.unsplash.com/user/c_v_r"/>;" alt="Description">
+                  </figure>
+              </div>
+              <div class="column is-6 is-offset-1">
+                  <h1 class="title is-2">
+                      Food & Cocktail Recipes
+                  </h1>
+                  <br>
+                  <h2 class="subtitle is-4">
+                    "Culture is influenced by food through various ways, so why not explore it."
+                  </h2>
+                  <h3>
+                    - anonymous
+                  </h3>
+                  <br>
+                  <p class="has-text-centered">
+                      <a class="button is-success is-info is-outlined">
+                          Learn more
+                      </a>
+                  </p>
+              </div>
+          </div>
+      </div>
+  </div>
     
     
-    
-    <!-- title -->
-    <h2 class="title is-2 has-text-centered mt-5 mb-6">Eat . Drink . Enjoy
-    </h2>
+    <!-- recipe search  title-->
+    <div id="search-title" class="title is-3 has-text-centered mt-5 mb-6">Search for a Recipe
+    </div>
+
+    <!-- recipie search bar and button -->
+    <div id="searchbar" class="field has-addons">
+      <form id="formClass" class="control">
+        <input id="searchInput" class="input is-hovered mt-3" type="text" placeholder="e.g. chicken">
+        <button type="submit" id="search" class="button is-success is-info is-outlined is-centered mt-3">
+          Search
+        </button>
+      </form>
+    </div>
 
     <section id="container">
-      <div id="content" class="columns is-centered is-multiline is-mobile">
-        <img class="column is-half" src="https://post.healthline.com/wp-content/uploads/2020/09/healthy-eating-ingredients-732x549-thumbnail.jpg">
+      <div id="content" class="columns is-centered is-multiline is-mobile mb-6">
+       <!-- js content area -->
       </div>
     </section>
     
 
 
     <!-- Start footnotes -->
-    <footer class="footer">
+    <footer class="container-footer">
       <div class="content has-text-right">
        Designed by: <strong>The-Cloud-Beaters</strong> 🌪💃🏾
       </div>
