@@ -138,7 +138,8 @@ recipeMiddleE.addEventListener('click', (e) => {
 // search input function 
 searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  searchValue = e.target.querySelector('input').value;
+  searchValue = e.target.querySelector('.input').value;
+  storeSearchResults(searchValue);
   fetchAPI();
 });
 // dinner recipes for different cuisines - Asian
@@ -161,4 +162,7 @@ drinkButton.addEventListener('click', (e) => {
   drinkAPI()
 }) 
 
-
+// local storage
+function storeSearchResults (query) {
+  localStorage.setItem('foodSearch', JSON.stringify(query))
+}
