@@ -42,4 +42,4 @@ https://www.edamam.com/
 
 ## Screenshot Link
 
-https://user-images.githubusercontent.com/105450668/180341526-aa662bd4-a72d-48b4-85ae-182eeff6049c.png)
+(https://user-images.githubusercontent.com/105450668/180341526-aa662bd4-a72d-48b4-85ae-182eeff6049c.png)
