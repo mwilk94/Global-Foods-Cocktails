@@ -70,7 +70,7 @@ function generateHTMLcocktail(results) {
 }
 //query for drink
 async function drinkAPI() {
-  const drinkUrl = `https://api.spoonacular.com/recipes/random?apiKey=d9198279705947d8a12b0e30d3ee43cf&tags=drink&number=5`;
+  const drinkUrl = `https://api.spoonacular.com/recipes/random?apiKey=cab7e9aedeef4bc6981a9aa8fa2dae2a&tags=drink&number=5`;
   let drinkResponse = await fetch(drinkUrl);
   console.log(drinkResponse)
   const drinkData = await drinkResponse.json();
